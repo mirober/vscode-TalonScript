@@ -130,7 +130,7 @@
       "name": "constant.numeric.talon"
     },
     "varname": {
-      "match": "([a-zA-Z0-9._])(_(list|\\d+))?",
+      "match": "([a-zA-Z0-9._])(_(list|\\d+)(?=[^a-zA-Z0-9._]))?",
       "name": "variable.parameter.talon",
       "captures": {
         "2": {

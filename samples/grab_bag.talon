@@ -65,8 +65,10 @@ A (o'clock | <capture> | {list}): "b"
 with open {user.py_fopen_modes}+:
 (with open {user.py_fopen_modes}+ | A):
     modes = user.cat(print(py_fopen_modes_list)) #Test
+    modes = user.cat(print(py_fopen_modes_lister)) #Test
     modes = user.cat(print(py_fopen_modes_55)) #Test
     modes = "{user.cat(print(py_fopen_modes_55))}" #Test
+    modes = "{py_fopen_modes_lister}" #Test
     modes = py_fopen_modes_list
     modes = py_fopen_modes_55
     modes = py_fopen_modes_55_6

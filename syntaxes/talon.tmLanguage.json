@@ -50,6 +50,9 @@
               "include": "#comment"
             },
             {
+              "include": "#comment-invalid"
+            },
+            {
               "include": "#regexp"
             }
           ]
@@ -102,6 +105,9 @@
           "include": "#comment"
         },
         {
+          "include": "#comment-invalid"
+        },
+        {
           "include": "#other-rule-definition"
         },
         {
@@ -118,8 +124,12 @@
       "name": "string.interpolated.talon"
     },
     "comment": {
-      "match": "(\\s*#.*)$",
+      "match": "^\\s*(#.*)$",
       "name": "comment.line.number-sign.talon"
+    },
+    "comment-invalid": {
+      "match": "(\\s*#.*)$",
+      "name": "invalid.illegal"
     },
     "operator": {
       "match": "\\s(\\+|-|\\*|/|or)\\s",
@@ -467,6 +477,9 @@
           "include": "#comment"
         },
         {
+          "include": "#comment-invalid"
+        },
+        {
           "include": "#expression"
         }
       ]
@@ -500,6 +513,9 @@
       "patterns": [
         {
           "include": "#comment"
+        },
+        {
+          "include": "#comment-invalid"
         },
         {
           "include": "#qstring-long"

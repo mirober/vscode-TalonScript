@@ -26,6 +26,7 @@ repository:
         name: entity.name.type.talon
         patterns:
           - include: "#comment"
+          - include: "#comment-invalid"
           - include: "#regexp"
   regexp:
     begin: (/)
@@ -52,6 +53,7 @@ repository:
   body-noheader:
     patterns:
       - include: "#comment"
+      - include: "#comment-invalid"
       - include: "#other-rule-definition"
       - include: "#speech-rule-definition"
   # ------------------------------------------------
@@ -62,8 +64,11 @@ repository:
     match: ({[a-zA-Z0-9._]+?})
     name: string.interpolated.talon
   comment:
-    match: (\s*#.*)$
+    match: ^\s*(#.*)$
     name: comment.line.number-sign.talon
+  comment-invalid:
+    match: (\s*#.*)$
+    name: invalid.illegal
   operator:
     match: \s(\+|-|\*|/|or)\s
     name: keyword.operator.talon
@@ -261,6 +266,7 @@ repository:
         name: keyword.operator.talon
     patterns:
       - include: "#comment"
+      - include: "#comment-invalid"
       - include: "#expression"
   expression:
     patterns:
@@ -274,6 +280,7 @@ repository:
   statement:
     patterns:
       - include: "#comment"
+      - include: "#comment-invalid"
       - include: "#qstring-long"
       - include: "#action-key"
       - include: "#action"

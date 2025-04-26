@@ -56,8 +56,10 @@ gamepad(right_xy:repeat):
     y = y * 25
     mouse_move(mx + x, my - y)
 
-
-5 o'clock: "test"
+# test
+5 o'clock: "test" # test
+5 o'clock:  # test
+    "test" # test
 5 o'clock: "test:"
 a: "b"
 A: "b"
@@ -75,7 +77,7 @@ with open {user.py_fopen_modes}+:
     modes = 5 + 5
     modes = "Test" + "Test"
     5+5
-    modes = """ Test """
+    modes = """ Test # t"""
     insert(py_fopen_modes_list)
     user.cat(print(py_fopen_modes_list)) #Test
 tag(): user.terminal
